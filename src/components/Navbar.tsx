@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PhoneCall, Menu, X, Sparkles, FileText, ChevronRight } from 'lucide-react';
+import { PhoneCall, Menu, X, FileText, ChevronRight } from 'lucide-react';
 import { Logo } from './Logo.tsx';
 import { companyInfo } from '../data/cateringData.ts';
 
@@ -45,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
     { id: 'beranda', label: 'Beranda', href: '#beranda' },
     { id: 'meal-box', label: 'Meal Box', href: '#meal-box' },
     { id: 'prasmanan', label: 'Prasmanan', href: '#prasmanan' },
-    { id: 'snack-box', label: 'Custom Snack Box', href: '#snack-box' },
+    { id: 'snack-box', label: 'Snack Box', href: '#snack-box' },
     { id: 'syarat-ketentuan', label: 'Syarat & Ketentuan', href: '#syarat-ketentuan' },
   ];
 
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
           </a>
 
           {/* Center: Desktop Nav Links */}
-          <nav id="desktop-nav" className="hidden md:flex items-center space-x-1 lg:space-x-6">
+          <nav id="desktop-nav" className="hidden lg:flex items-center space-x-1 xl:space-x-3 shrink-0 flex-nowrap">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -85,49 +85,49 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
                   key={link.id}
                   id={`nav-link-${link.id}`}
                   href={link.href}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                  className={`relative px-2.5 xl:px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap shrink-0 ${
                     isActive ? 'text-[#063694] font-semibold' : 'text-slate-600 hover:text-[#063694]'
-                  } after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:transition-all after:duration-300 ${
+                  } after:content-[''] after:absolute after:bottom-0 after:left-2.5 xl:after:left-3 after:right-2.5 xl:after:right-3 after:h-[2px] after:transition-all after:duration-300 ${
                     isActive ? 'after:bg-[#063694] after:scale-x-100' : 'after:bg-[#063694] after:scale-x-0 hover:after:scale-x-100'
                   }`}
                 >
-                  {link.label}
+                  <span className="whitespace-nowrap">{link.label}</span>
                 </a>
               );
             })}
           </nav>
 
           {/* Right: Custom Pill CTA Button matching reference UI */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 flex-nowrap">
             <button
               id="nav-download-catalog-btn"
               onClick={onOpenCatalog}
               type="button"
-              className="text-xs font-semibold text-slate-600 hover:text-[#063694] flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-blue-50/60 transition-colors"
+              className="text-xs font-semibold text-slate-600 hover:text-[#063694] flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-blue-50/60 transition-colors cursor-pointer whitespace-nowrap shrink-0"
               title="Lihat & Unduh PDF Katalog"
             >
-              <FileText className="w-3.5 h-3.5 text-[#063694]" />
-              <span>Katalog PDF</span>
+              <FileText className="w-3.5 h-3.5 text-[#063694] shrink-0" />
+              <span className="whitespace-nowrap">Unduh Katalog (PDF)</span>
             </button>
 
             <button
               id="nav-cta-order-btn"
               onClick={handleWhatsAppOrder}
               type="button"
-              className="rounded-full bg-[#063694] hover:bg-[#042361] active:scale-95 text-white px-5 sm:px-6 py-2.5 font-semibold text-sm flex items-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
+              className="rounded-full bg-[#063694] hover:bg-[#042361] active:scale-95 text-white px-4 xl:px-5 py-2.5 font-semibold text-sm flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0"
             >
               <PhoneCall className="text-[#D4AF37] w-4 h-4 shrink-0" />
-              <span>Pesan Sekarang</span>
+              <span className="whitespace-nowrap">Pesan Sekarang</span>
             </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex sm:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2">
             <button
               id="mobile-phone-btn"
               onClick={handleWhatsAppOrder}
               type="button"
-              className="rounded-full bg-[#1B3D2F] text-white p-2 shadow-sm"
+              className="rounded-full bg-[#063694] text-white p-2 shadow-sm flex items-center justify-center cursor-pointer"
               aria-label="Telepon / WhatsApp"
             >
               <PhoneCall className="text-[#D4AF37] w-4 h-4" />
@@ -137,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="p-2 rounded-lg text-slate-700 hover:text-[#063694] hover:bg-slate-100 focus:outline-none"
+              className="p-2 rounded-lg text-slate-700 hover:text-[#063694] hover:bg-slate-100 focus:outline-none cursor-pointer"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -150,7 +150,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
       {mobileMenuOpen && (
         <div
           id="mobile-drawer"
-          className="sm:hidden fixed inset-x-0 top-[62px] bg-white border-b border-slate-200 shadow-xl px-4 pt-3 pb-6 transition-all duration-300 animate-fadeIn"
+          className="lg:hidden fixed inset-x-0 top-[62px] bg-white border-b border-slate-200 shadow-xl px-4 pt-3 pb-6 transition-all duration-300 animate-fadeIn"
         >
           <div className="flex flex-col space-y-2">
             {navLinks.map((link) => (

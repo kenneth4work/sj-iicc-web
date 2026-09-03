@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Download, Award, ShieldCheck, Utensils, Star, CheckCircle, Sparkles, MapPin } from 'lucide-react';
+import { ArrowDown, Download, Award, ShieldCheck, Utensils, Star, CheckCircle, MapPin } from 'lucide-react';
 import { companyInfo } from '../data/cateringData.ts';
 
 interface HeroSectionProps {

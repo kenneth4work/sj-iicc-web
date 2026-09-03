@@ -23,7 +23,9 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#0F172A] font-sans selection:bg-[#063694] selection:text-white">
       {/* 1. Sticky Navigation Bar */}
-      <Navbar onOpenCatalog={() => setCatalogOpen(true)} />
+      <Navbar
+        onOpenCatalog={() => setCatalogOpen(true)}
+      />
 
       {/* Main Landing Content */}
       <main className="flex-1">
