@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saji Catering by IICC - Unit Usaha PT BLST IPB University</title>
+  <meta name="description" content="Layanan Katering Profesional & Elegan berstandar IPB International Convention Center (PT BLST IPB University). Menyajikan Meal Box, Prasmanan, & Custom Snack Box." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN with Custom Theme Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#063694',
+              deepNavy: '#042361',
+              gold: '#D4AF37',
+              forest: '#1B3D2F',
+              forestHover: '#142e23',
+              wa: '#25D366',
+              waHover: '#20ba5a'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.85); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fadeIn { animation: fadeIn 0.25s ease-out forwards; }
+    .animate-scaleIn { animation: scaleIn 0.2s ease-out forwards; }
+    
+    @media print {
+      body * { visibility: hidden; }
+      #catalog-modal-content, #catalog-modal-content * { visibility: visible; }
+      #catalog-modal-content { position: absolute; left: 0; top: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans antialiased selection:bg-[#063694] selection:text-white">
+
+  <!-- ================= TOP NOTIFICATION / CREDIBILITY BAR ================= -->
+  <div class="bg-[#042361] text-white text-xs py-2 px-4 border-b border-blue-900/60">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#D4AF37] text-slate-950 uppercase tracking-wider">
+          Official IICC Unit
+        </span>
+        <span class="text-blue-100 font-medium">Layanan Katering Resmi PT BLST Holding Company of IPB University</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] text-blue-200">
+        <span class="flex items-center gap-1">📍 Botani Square Mall Lt. 2, Bogor</span>
+        <span class="hidden md:inline">•</span>
+        <a href="https://wa.me/628111161100" target="_blank" class="hover:text-[#D4AF37] font-semibold text-emerald-400 flex items-center gap-1">
+          <i data-lucide="phone-call" class="w-3 h-3"></i> 0811-1161-100
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= STICKY NAVBAR ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-[#063694] flex items-center justify-center text-white font-serif font-bold text-2xl shadow-md group-hover:bg-[#042361] transition-colors border border-blue-800">
+            saji
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg font-black tracking-tight text-slate-900 font-display">SAJI CATERING</span>
+              <span class="text-[10px] bg-blue-50 text-[#063694] font-bold px-2 py-0.5 rounded-full border border-blue-200">by IICC</span>
+            </div>
+            <p class="text-[11px] text-slate-500 font-medium">PT BLST IPB Holding Company</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="#meal-box" class="hover:text-[#063694] transition-colors">Meal Box (35k &amp; 50k)</a>
+          <a href="#prasmanan" class="hover:text-[#063694] transition-colors">Prasmanan Buffet</a>
+          <a href="#snack-box" class="hover:text-[#063694] transition-colors">Custom Snack Box</a>
+          <a href="#kalkulator" class="hover:text-[#063694] transition-colors">Simulasi Biaya</a>
+          <a href="#syarat-ketentuan" class="hover:text-[#063694] transition-colors">Syarat &amp; Ketentuan</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openCatalogModal()" class="px-4 py-2.5 rounded-full text-xs font-bold text-[#063694] bg-blue-50 hover:bg-blue-100 border border-blue-200/80 transition-all flex items-center gap-1.5 cursor-pointer">
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-[#063694]"></i>
+            <span>Katalog Resmi</span>
+          </button>
+          
+          <a href="https://wa.me/628111161100?text=Halo%20Saji%20Catering%20by%20IICC,%20saya%20ingin%20memesan%20katering." target="_blank" class="px-5 py-2.5 rounded-full bg-[#063694] hover:bg-[#042361] text-white text-xs font-bold transition-all shadow-md flex items-center gap-2 cursor-pointer">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-[#D4AF37]"></i>
+            <span>Pesan Sekarang</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+          <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+      <a href="#meal-box" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-800 hover:text-[#063694]">Meal Box (35k &amp; 50k)</a>
+      <a href="#prasmanan" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-800 hover:text-[#063694]">Prasmanan Buffet</a>
+      <a href="#snack-box" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-800 hover:text-[#063694]">Custom Snack Box</a>
+      <a href="#kalkulator" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-800 hover:text-[#063694]">Simulasi Biaya</a>
+      <a href="#syarat-ketentuan" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-800 hover:text-[#063694]">Syarat &amp; Ketentuan</a>
+      
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="openCatalogModal(); toggleMobileMenu();" class="w-full py-2.5 rounded-xl text-xs font-bold text-[#063694] bg-blue-50 border border-blue-200 text-center">
+          Buka Katalog Menu Lengkap
+        </button>
+        <a href="https://wa.me/628111161100" target="_blank" class="w-full py-2.5 rounded-xl bg-[#1B3D2F] text-white text-xs font-bold text-center flex items-center justify-center gap-2">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-[#D4AF37]"></i>
+          <span>Hubungi Sales WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative py-16 sm:py-24 lg:py-28 overflow-hidden bg-gradient-to-b from-white via-[#F8FAFC] to-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content (Col 7) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-[#063694] text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#063694]"></i>
+            <span>IPB International Convention Center (IICC) Catering</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 font-display tracking-tight leading-[1.12]">
+            Layanan Katering <span class="text-[#063694]">Profesional &amp; Elegan</span> di Kota Bogor
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Penyedia hidangan katering berstandar hotel berbintang di bawah naungan <strong>PT BLST Holding Company of IPB</strong>. Melayani jamuan Meal Box harian korporat, seminar kenegaraan, custom snack box, hingga prasmanan resepsi pernikahan mewah.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#meal-box" class="w-full sm:w-auto px-7 py-4 rounded-full bg-[#063694] hover:bg-[#042361] text-white font-bold text-sm shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2.5">
+              <span>Lihat Pilihan Menu</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-[#D4AF37]"></i>
+            </a>
+
+            <button onclick="openCatalogModal()" class="w-full sm:w-auto px-7 py-4 rounded-full bg-white hover:bg-slate-50 text-[#063694] border-2 border-[#063694]/30 font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="download" class="w-4 h-4 text-[#063694]"></i>
+              <span>Unduh Katalog Resmi (PDF)</span>
+            </button>
+          </div>
+
+          <!-- Feature Pills -->
+          <div class="pt-4 grid grid-cols-3 gap-3 border-t border-slate-200/80">
+            <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#063694] shrink-0"></i>
+              <span>100% Halal Certified</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#063694] shrink-0"></i>
+              <span>Higienis &amp; HACCP</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#063694] shrink-0"></i>
+              <span>Tepat Waktu se-Jabodetabek</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Grid (Col 5) -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4 relative">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80" alt="Prasmanan Buffet Saji" class="w-full h-44 sm:h-52 object-cover" />
+              <div class="p-3 bg-white">
+                <span class="text-[10px] font-bold text-[#063694] uppercase">Prasmanan Buffet</span>
+                <p class="text-xs font-bold text-slate-900">Standar Bintang Lima IICC</p>
+              </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=80" alt="Snack Box Pastry" class="w-full h-32 sm:h-36 object-cover" />
+              <div class="p-2.5 bg-white">
+                <p class="text-xs font-bold text-slate-900">Custom Pastry &amp; Snack Box</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-6">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=80" alt="Executive Bento Box" class="w-full h-36 sm:h-44 object-cover" />
+              <div class="p-2.5 bg-white">
+                <p class="text-xs font-bold text-slate-900">Executive Meal Box Rp 35k - 50k</p>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-[#042361] text-white p-5 shadow-xl border border-blue-900 space-y-2">
+              <div class="flex items-center gap-1 text-[#D4AF37]">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-xs font-medium text-blue-100 italic">&ldquo;Cita rasa konsisten, pengiriman tepat waktu, dan pengemasan bento sangat rapi untuk tamu VVIP.&rdquo;</p>
+              <p class="text-[10px] text-[#D4AF37] font-bold">— Biro Kerja Sama &amp; Protokol BUMN</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS & TRUST ================= -->
+  <section class="py-14 bg-white border-y border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#063694] font-display">10.000+</div>
+          <div class="text-xs sm:text-sm font-bold text-slate-800">Acara Sukses Ditangani</div>
+          <div class="text-[11px] text-slate-400">Instansi, BUMN, &amp; Wedding</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#063694] font-display">100%</div>
+          <div class="text-xs sm:text-sm font-bold text-slate-800">Higienis &amp; Halal</div>
+          <div class="text-[11px] text-slate-400">Standar Dapur HACCP</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#063694] font-display">50+</div>
+          <div class="text-xs sm:text-sm font-bold text-slate-800">Variasi Menu Nusantara</div>
+          <div class="text-[11px] text-slate-400">Otentik &amp; Kontemporer</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-black text-[#063694] font-display">4.9 / 5.0</div>
+          <div class="text-xs sm:text-sm font-bold text-slate-800">Kepuasan Klien</div>
+          <div class="text-[11px] text-slate-400">Berdasarkan Ribuan Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MENU SHOWCASE SECTION ================= -->
+  <section id="meal-box" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-[#063694] border border-blue-200 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="utensils" class="w-3.5 h-3.5 text-[#063694]"></i>
+          <span>Pilihan Menu Resmi Saji Catering</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-display">
+          Katalog Lengkap Meal Box &amp; Bento VIP
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Dari paket ekonomis bergizi Rp 35.000 (14 varian menu A-N) hingga Bento Tradisional Nusantara &amp; Japanese VIP.
+        </p>
+      </div>
+
+      <!-- Menu Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 border-b border-slate-200 pb-4">
+        <button onclick="switchMenuTab('box35k')" id="tab-box35k" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-[#063694] text-white shadow-sm cursor-pointer">
+          Meal Box Rp 35.000 (14 Pilihan)
+        </button>
+        <button onclick="switchMenuTab('box50k')" id="tab-box50k" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+          Meal Box Eksekutif Rp 50.000 (+Sup)
+        </button>
+        <button onclick="switchMenuTab('bento')" id="tab-bento" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+          Signature Bento Nusantara &amp; VIP
+        </button>
+      </div>
+
+      <!-- TAB 1: Meal Box 35k Grid (14 Variants A-N) -->
+      <div id="content-box35k" class="menu-tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
+        <!-- Injected via JavaScript below -->
+      </div>
+
+      <!-- TAB 2: Meal Box 50k Grid (+ Soto / Sup) -->
+      <div id="content-box50k" class="menu-tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 animate-fadeIn">
+        <!-- Injected via JavaScript below -->
+      </div>
+
+      <!-- TAB 3: Bento Signature VIP -->
+      <div id="content-bento" class="menu-tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+        <!-- Injected via JavaScript below -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PRASMANAN BUFFET SECTION ================= -->
+  <section id="prasmanan" class="py-20 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="crown" class="w-3.5 h-3.5 text-[#D4AF37]"></i>
+          <span>Prasmanan Gathering &amp; Royal Wedding</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-display">
+          Sajian Prasmanan Standar Hotel Berbintang
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Lengkap dengan meja dekoratif, roll-top chafing dish mewah, pramusaji berseragam, dan peralatan makan porselen higienis.
+        </p>
+      </div>
+
+      <!-- Prasmanan Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Paket Standard 75k -->
+        <div class="bg-[#F8FAFC] rounded-3xl p-6 border border-slate-200 hover:border-[#063694] transition-all flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-[#063694]">Gathering Standard</span>
+            <div class="space-y-1">
+              <h3 class="text-2xl font-black text-slate-900">Rp 75.000 <span class="text-xs font-semibold text-slate-500">/ PAX</span></h3>
+              <p class="text-xs text-slate-500">Cocok untuk Rapat Kerja &amp; Seminar</p>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2">✓ Nasi Putih Wangi</li>
+              <li class="flex items-center gap-2">✓ 1 Pilihan Olahan Ayam (Goreng/Bakar/Rica)</li>
+              <li class="flex items-center gap-2">✓ 1 Pilihan Olahan Ikan / Daging</li>
+              <li class="flex items-center gap-2">✓ 1 Sayur Segar / Sup Panas</li>
+              <li class="flex items-center gap-2">✓ Kerupuk Udang, Sambal &amp; Acar</li>
+              <li class="flex items-center gap-2">✓ Buah Potong Segar &amp; Air Mineral</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/628111161100?text=Halo%20Saji%20Catering,%20saya%20tertarik%20dengan%20Paket%20Prasmanan%20Standard%20Rp%2075.000/PAX." target="_blank" class="w-full py-3 rounded-xl bg-[#063694] text-white font-bold text-xs text-center hover:bg-[#042361] transition-colors">
+            Pesan Paket 75k
+          </a>
+        </div>
+
+        <!-- Paket Deluxe 95k (Recommended) -->
+        <div class="bg-gradient-to-b from-blue-50 to-white rounded-3xl p-6 border-2 border-[#063694] shadow-xl relative flex flex-col justify-between space-y-6">
+          <div class="absolute -top-3 right-6 bg-[#D4AF37] text-slate-950 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
+            Paling Populer
+          </div>
+          <div class="space-y-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#063694] text-white">Corporate Deluxe</span>
+            <div class="space-y-1">
+              <h3 class="text-2xl font-black text-slate-900">Rp 95.000 <span class="text-xs font-semibold text-slate-500">/ PAX</span></h3>
+              <p class="text-xs text-slate-500">Standar Instansi &amp; Jamuan Kenegaraan</p>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2">✓ Nasi Putih + Nasi Goreng Spesial</li>
+              <li class="flex items-center gap-2">✓ Olahan Daging Sapi Lada Hitam / Rendang</li>
+              <li class="flex items-center gap-2">✓ Olahan Ayam Fillet Suwir / Bakar Madu</li>
+              <li class="flex items-center gap-2">✓ Olahan Ikan Gurame / Kakap Asam Manis</li>
+              <li class="flex items-center gap-2">✓ Sup Kimlo / Sup Iga Nusantara</li>
+              <li class="flex items-center gap-2">✓ Dessert Pudding Kopyor + Buah Segar</li>
+              <li class="flex items-center gap-2">✓ Ice Tea, Infused Water &amp; Mineral</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/628111161100?text=Halo%20Saji%20Catering,%20saya%20tertarik%20dengan%20Paket%20Prasmanan%20Deluxe%20Rp%2095.000/PAX." target="_blank" class="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs text-center transition-colors">
+            Pesan Paket Deluxe 95k
+          </a>
+        </div>
+
+        <!-- Paket Royal Wedding 125k -->
+        <div class="bg-[#042361] text-white rounded-3xl p-6 border border-blue-900 shadow-xl flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-[#D4AF37] text-slate-950">Royal Wedding &amp; Gala</span>
+            <div class="space-y-1">
+              <h3 class="text-2xl font-black text-[#D4AF37]">Rp 125.000 <span class="text-xs font-semibold text-blue-200">/ PAX</span></h3>
+              <p class="text-xs text-blue-200">Resepsi Megah Ballroom IICC</p>
+            </div>
+            <ul class="space-y-2 text-xs text-blue-100">
+              <li class="flex items-center gap-2">✓ Nasi Pandan Wangi &amp; Nasi Liwet Kasturi</li>
+              <li class="flex items-center gap-2">✓ Beef Stroganoff / Daging Balado Padang</li>
+              <li class="flex items-center gap-2">✓ Ayam Kodok Saus Jamur / Bakar Jimbaran</li>
+              <li class="flex items-center gap-2">✓ Udang Telur Asin / Kakap Gulung</li>
+              <li class="flex items-center gap-2">✓ Sup Buntut Rempah / Tom Yum Seafood</li>
+              <li class="flex items-center gap-2">✓ Aneka Mini Pastry, Pudding &amp; Buah Segar</li>
+              <li class="flex items-center gap-2">✓ Free Food Stall (Kambing Guling/Zuppa)</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/628111161100?text=Halo%20Saji%20Catering,%20saya%20tertarik%20konsultasi%20Paket%20Wedding%20125k/PAX." target="_blank" class="w-full py-3 rounded-xl bg-[#D4AF37] hover:bg-[#c49f2e] text-slate-950 font-bold text-xs text-center transition-colors">
+            Konsultasi Wedding IICC
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE SNACK BOX BUILDER ================= -->
+  <section id="snack-box" class="py-20 bg-[#F8FAFC] border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#ecfdf5] text-emerald-800 border border-emerald-200 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span>Interactive Snack Box Builder</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 font-display">
+          Susun Kotak Snack Impian Anda
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Mulai dari <strong>Rp 25.000 / Box</strong>. Pilih kombinasi favorit Anda dari 25 pilihan pastry manis, snack asin gurih, dan kletikan renyah khas Bogor.
+        </p>
+
+        <!-- Quick actions -->
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-2">
+          <button onclick="filterSnackCategory('all')" id="snack-cat-all" class="snack-filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-[#063694] text-white cursor-pointer">
+            Semua (25 Pilihan)
+          </button>
+          <button onclick="filterSnackCategory('manis')" id="snack-cat-manis" class="snack-filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+            Manis (10 Item)
+          </button>
+          <button onclick="filterSnackCategory('asin')" id="snack-cat-asin" class="snack-filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+            Asin (10 Item)
+          </button>
+          <button onclick="filterSnackCategory('kletikan')" id="snack-cat-kletikan" class="snack-filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer">
+            Kletikan (5 Item)
+          </button>
+          <button onclick="selectRecommendedSnacks()" class="px-3 py-1.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 hover:bg-amber-200 transition-colors flex items-center gap-1 cursor-pointer">
+            <i data-lucide="sparkles" class="w-3 h-3 text-amber-700"></i> Rekomendasi IICC (3 Item)
+          </button>
+          <button onclick="resetSnackSelection()" class="px-3 py-1.5 rounded-full text-xs font-bold text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer">
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Snacks Grid -->
+      <div id="snack-items-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <!-- Dynamically rendered items -->
+      </div>
+
+      <!-- Sticky Builder Bottom Bar -->
+      <div class="sticky bottom-4 z-40 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border-2 border-[#063694]/30 p-4 transition-all">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+          
+          <div class="flex items-center gap-3 w-full lg:w-auto">
+            <div class="bg-[#063694] text-white px-3.5 py-1.5 rounded-xl font-bold text-xs flex items-center gap-2 shrink-0">
+              <i data-lucide="shopping-bag" class="w-4 h-4 text-[#D4AF37]"></i>
+              <span id="selected-snack-count">3 Snack Terpilih</span>
+            </div>
+            <div id="selected-snack-names" class="text-xs text-slate-700 truncate font-medium flex-1">
+              Vanilla Sultana • Risol Mayo • Keripik Singkong
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 w-full lg:w-auto justify-between lg:justify-start border-t lg:border-t-0 pt-2 lg:pt-0 border-slate-100">
+            <!-- Quantity Counter -->
+            <div class="flex items-center gap-2 bg-slate-100 p-1 rounded-xl">
+              <button onclick="changeSnackQuantity(-10)" class="w-7 h-7 rounded-lg bg-white text-slate-700 font-bold flex items-center justify-center hover:bg-slate-200 cursor-pointer">-</button>
+              <span id="snack-box-qty" class="text-xs font-bold px-2 text-slate-800 min-w-16 text-center">30 Box</span>
+              <button onclick="changeSnackQuantity(10)" class="w-7 h-7 rounded-lg bg-white text-slate-700 font-bold flex items-center justify-center hover:bg-slate-200 cursor-pointer">+</button>
+            </div>
+
+            <!-- Price -->
+            <div class="text-right">
+              <div class="text-[10px] text-slate-400">Total Estimasi:</div>
+              <div id="snack-total-price" class="text-base sm:text-lg font-black text-[#063694]">Rp 750.000</div>
+            </div>
+
+            <!-- WhatsApp Action -->
+            <button onclick="sendSnackOrderWhatsApp()" class="py-2.5 px-5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs flex items-center gap-2 shadow-md cursor-pointer shrink-0">
+              <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+              <span>Pesan via WA</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= BUDGET CALCULATOR SECTION ================= -->
+  <section id="kalkulator" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-slate-900 via-[#042361] to-[#063694] rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+        
+        <div class="relative z-10 space-y-8">
+          
+          <div class="text-center max-w-2xl mx-auto space-y-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+              <span>Simulasi Anggaran Konsumsi</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold font-display">
+              Kalkulator Estimasi Katering
+            </h2>
+            <p class="text-xs sm:text-sm text-blue-100/90">
+              Hitung kebutuhan biaya konsumsi rapat kerja, seminar, atau resepsi pesta Anda dalam hitungan detik.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+            
+            <!-- Controls -->
+            <div class="space-y-5">
+              <!-- 1. Service Type -->
+              <div class="space-y-2">
+                <label class="text-xs font-bold uppercase tracking-wider text-blue-200">1. Jenis Layanan Katering</label>
+                <div class="grid grid-cols-3 gap-2">
+                  <button type="button" onclick="setCalcService('mealbox', 35000)" id="calc-srv-mealbox" class="calc-srv-btn py-2.5 px-3 rounded-xl text-xs font-bold bg-[#D4AF37] text-slate-950 cursor-pointer">
+                    Meal Box
+                  </button>
+                  <button type="button" onclick="setCalcService('prasmanan', 75000)" id="calc-srv-prasmanan" class="calc-srv-btn py-2.5 px-3 rounded-xl text-xs font-bold bg-white/10 text-white hover:bg-white/20 cursor-pointer">
+                    Prasmanan
+                  </button>
+                  <button type="button" onclick="setCalcService('wedding', 125000)" id="calc-srv-wedding" class="calc-srv-btn py-2.5 px-3 rounded-xl text-xs font-bold bg-white/10 text-white hover:bg-white/20 cursor-pointer">
+                    Wedding
+                  </button>
+                </div>
+              </div>
+
+              <!-- 2. Package Tier -->
+              <div class="space-y-2">
+                <label class="text-xs font-bold uppercase tracking-wider text-blue-200">2. Pilihan Paket</label>
+                <div id="calc-package-options" class="grid grid-cols-3 gap-2 text-xs">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+
+              <!-- 3. Pax Slider -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center text-xs font-bold text-blue-200">
+                  <span>3. Jumlah Porsi (Pax)</span>
+                  <span id="calc-pax-display" class="text-white text-sm font-extrabold bg-white/20 px-3 py-0.5 rounded-full">50 Pax</span>
+                </div>
+                <input type="range" id="calc-pax-slider" min="20" max="1000" step="10" value="50" oninput="updateCalculator()" class="w-full accent-[#D4AF37] h-2 bg-white/20 rounded-lg cursor-pointer">
+                <div class="flex justify-between text-[10px] text-blue-200/70">
+                  <span>Min 20</span>
+                  <span>250</span>
+                  <span>500</span>
+                  <span>1.000+</span>
+                </div>
+              </div>
+
+              <!-- 4. Addons -->
+              <div class="pt-2 border-t border-white/10 space-y-2">
+                <label class="text-xs font-bold uppercase tracking-wider text-blue-200 block">4. Add-ons Tambahan</label>
+                <label class="flex items-center gap-3 text-xs text-white cursor-pointer select-none">
+                  <input type="checkbox" id="calc-addon-snack" onchange="updateCalculator()" checked class="w-4 h-4 rounded accent-[#D4AF37]">
+                  <span>Sertakan Custom Snack Box (+Rp 25.000/box)</span>
+                </label>
+                <label class="flex items-center gap-3 text-xs text-white cursor-pointer select-none">
+                  <input type="checkbox" id="calc-addon-water" onchange="updateCalculator()" class="w-4 h-4 rounded accent-[#D4AF37]">
+                  <span>Air Mineral Botol 330ml (+Rp 3.000/botol)</span>
+                </label>
+              </div>
+
+            </div>
+
+            <!-- Summary Card -->
+            <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-xl flex flex-col justify-between space-y-6 h-full">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                  <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Ringkasan Anggaran</span>
+                  <span id="calc-summary-pax" class="text-xs font-bold text-[#063694] bg-blue-50 px-2.5 py-1 rounded-full">50 Orang</span>
+                </div>
+
+                <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+                  <div class="flex justify-between">
+                    <span class="text-slate-500">Menu Utama:</span>
+                    <span id="calc-cost-main" class="font-semibold text-slate-800">Rp 1.750.000</span>
+                  </div>
+                  <div id="calc-row-snack" class="flex justify-between">
+                    <span class="text-slate-500">Snack Box:</span>
+                    <span id="calc-cost-snack" class="font-semibold text-slate-800">Rp 1.250.000</span>
+                  </div>
+                  <div id="calc-row-water" class="hidden flex justify-between">
+                    <span class="text-slate-500">Air Mineral:</span>
+                    <span id="calc-cost-water" class="font-semibold text-slate-800">Rp 0</span>
+                  </div>
+                </div>
+
+                <div class="pt-4 border-t-2 border-dashed border-slate-200">
+                  <div class="text-xs text-slate-400 font-medium">Perkiraan Total Anggaran:</div>
+                  <div id="calc-total-cost" class="text-2xl sm:text-3xl font-black text-[#063694] tracking-tight mt-0.5">Rp 3.000.000</div>
+                  <div class="text-[11px] text-slate-500 mt-1">*Estimasi belum termasuk PPN &amp; penyesuaian khusus.</div>
+                </div>
+              </div>
+
+              <button onclick="sendQuotationWhatsApp()" class="w-full py-4 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all">
+                <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                <span>Dapatkan Penawaran Resmi via WA</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TERMS & CONDITIONS ================= -->
+  <section id="syarat-ketentuan" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="text-center space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-[#063694] border border-blue-200 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#063694]"></i>
+          <span>Standar Layanan &amp; Kebijakan Resmi</span>
+        </div>
+        <h2 class="text-3xl font-black text-slate-900 font-display">
+          Syarat &amp; Ketentuan Pemesanan
+        </h2>
+        <p class="text-sm text-slate-600">
+          Informasi jadwal pemesanan (H-7), perubahan menu (H-3), dan skema pembayaran resmi PT BLST IPB.
+        </p>
+      </div>
+
+      <!-- Accordion List -->
+      <div class="space-y-3" id="terms-accordion">
+        
+        <!-- Term 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
+          <button onclick="toggleTerm('t1')" class="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <div class="flex items-center gap-3">
+              <i data-lucide="calendar" class="w-5 h-5 text-[#063694]"></i>
+              <span class="font-bold text-sm sm:text-base text-slate-900">1. Waktu Pemesanan &amp; Batas Konfirmasi (H-7)</span>
+            </div>
+            <i data-lucide="chevron-down" id="t1-icon" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          </button>
+          <div id="t1-body" class="px-5 pb-5 pt-1 text-xs text-slate-600 space-y-2 border-t border-slate-100 bg-slate-50/50">
+            <p>• Pemesanan katering sebaiknya dilakukan selambat-lambatnya <strong>H-7</strong> sebelum hari pelaksanaan acara.</p>
+            <p>• Untuk pemesanan mendesak (kurang dari H-7), silakan koordinasikan langsung dengan sales eksekutif kami untuk verifikasi ketersediaan slot dapur.</p>
+          </div>
+        </div>
+
+        <!-- Term 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
+          <button onclick="toggleTerm('t2')" class="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <div class="flex items-center gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-[#063694]"></i>
+              <span class="font-bold text-sm sm:text-base text-slate-900">2. Perubahan Menu &amp; Jumlah Porsi (H-3)</span>
+            </div>
+            <i data-lucide="chevron-down" id="t2-icon" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          </button>
+          <div id="t2-body" class="hidden px-5 pb-5 pt-1 text-xs text-slate-600 space-y-2 border-t border-slate-100 bg-slate-50/50">
+            <p>• Perubahan varian menu dan penambahan jumlah porsi dapat dilakukan maksimal <strong>H-3</strong> sebelum acara.</p>
+            <p>• Pengurangan jumlah porsi tidak dapat dilakukan setelah penandatanganan konfirmasi order resmi.</p>
+          </div>
+        </div>
+
+        <!-- Term 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
+          <button onclick="toggleTerm('t3')" class="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+            <div class="flex items-center gap-3">
+              <i data-lucide="credit-card" class="w-5 h-5 text-[#D4AF37]"></i>
+              <span class="font-bold text-sm sm:text-base text-slate-900">3. Ketentuan Pembayaran Resmi PT BLST IPB</span>
+            </div>
+            <i data-lucide="chevron-down" id="t3-icon" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          </button>
+          <div id="t3-body" class="px-5 pb-5 pt-1 text-xs text-slate-600 space-y-2 border-t border-slate-100 bg-slate-50/50">
+            <p>• <strong>Down Payment (DP) 50%</strong> dibayarkan saat konfirmasi pemesanan dan penguncian jadwal.</p>
+            <p>• <strong>Pelunasan 50%</strong> dilakukan selambat-lambatnya <strong>H-1</strong> sebelum acara berlangsung.</p>
+            <p>• Pembayaran ditransfer ke rekening bank resmi atas nama <strong>PT BLST Holding Company of IPB</strong>.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SPH Banner -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-center sm:text-left space-y-1">
+          <h4 class="text-sm font-bold text-slate-900">Butuh Penawaran Resmi &amp; Invoice untuk Lembaga / BUMN?</h4>
+          <p class="text-xs text-slate-500">Kami siap menerbitkan Surat Penawaran Harga (SPH), MOU, dan Faktur Pajak resmi PT BLST IPB.</p>
+        </div>
+        <a href="https://wa.me/628111161100?text=Halo%20Saji%20Catering,%20saya%20memerlukan%20SPH%20resmi%20untuk%20instansi%20kami." target="_blank" class="px-6 py-3 rounded-full bg-[#063694] hover:bg-[#042361] text-white text-xs font-bold whitespace-nowrap shadow-md">
+          Minta Penawaran Resmi (SPH)
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="kontak" class="bg-[#042361] text-white pt-16 pb-12 border-t border-blue-900/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-blue-900/60">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white text-[#063694] font-serif font-bold text-xl flex items-center justify-center">
+              saji
+            </div>
+            <div>
+              <span class="text-lg font-black tracking-tight font-display">SAJI CATERING</span>
+              <p class="text-[10px] text-blue-200">by IPB International Convention Center</p>
+            </div>
+          </div>
+          <p class="text-xs text-blue-100/80 leading-relaxed max-w-sm">
+            Unit usaha katering profesional terpercaya di bawah naungan <strong>PT BLST Holding Company of IPB University</strong>, Bogor.
+          </p>
+          <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-xs italic text-blue-200">
+            &ldquo;Serving Up Perfection — Menghadirkan cita rasa istimewa dengan ketepatan waktu mutlak.&rdquo;
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-sm font-bold text-[#D4AF37] uppercase tracking-wider">Pilihan Layanan</h4>
+          <ul class="space-y-2 text-xs text-blue-100">
+            <li><a href="#meal-box" class="hover:text-[#D4AF37]">Meal Box Paket Rp 35.000</a></li>
+            <li><a href="#meal-box" class="hover:text-[#D4AF37]">Meal Box Eksekutif Rp 50.000</a></li>
+            <li><a href="#meal-box" class="hover:text-[#D4AF37]">Bento Nusantara VIP</a></li>
+            <li><a href="#prasmanan" class="hover:text-[#D4AF37]">Prasmanan Gathering &amp; Corporate</a></li>
+            <li><a href="#prasmanan" class="hover:text-[#D4AF37]">Prasmanan Royal Wedding IICC</a></li>
+            <li><a href="#snack-box" class="hover:text-[#D4AF37]">Custom Snack Box Builder</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="text-sm font-bold text-[#D4AF37] uppercase tracking-wider">Hubungi Kami</h4>
+          <div class="space-y-2 text-xs text-blue-100">
+            <p>📍 Gedung Botani Square Mall Lt. 2, Jl. Pajajaran No. 1, Baranangsiang, Kota Bogor, Jawa Barat</p>
+            <p>📞 WhatsApp Sales: <a href="https://wa.me/628111161100" class="text-emerald-400 font-bold hover:underline">0811-1161-100</a></p>
+            <p>📸 Instagram: <a href="https://instagram.com/botani.catering.iicc" target="_blank" class="text-pink-300 hover:underline">@botani.catering.iicc</a></p>
+            <p>🕒 Jam Operasional: Setiap Hari (08.00 - 20.00 WIB)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-200/60">
+        <div>&copy; 2026 <strong>Saji Catering by IICC</strong>. Seluruh Hak Cipta Dilindungi.</div>
+        <div>Unit Usaha PT BLST IPB University • Kota Bogor</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <aside class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/628111161100?text=Halo%20Saji%20Catering%20by%20IICC,%20saya%20ingin%20konsultasi%20kebutuhan%20katering." target="_blank" class="flex items-center justify-center bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group relative">
+      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white"></span>
+      </span>
+      <i data-lucide="message-circle" class="w-7 h-7 fill-white text-[#25D366]"></i>
+    </a>
+  </aside>
+
+  <!-- ================= CATALOG MODAL ================= -->
+  <div id="catalog-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-900/80 backdrop-blur-md">
+    <div id="catalog-modal-content" class="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-200">
+      
+      <!-- Top modal bar -->
+      <div class="bg-[#042361] text-white px-5 py-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i data-lucide="book-open" class="w-5 h-5 text-[#D4AF37]"></i>
+          <span class="font-bold text-sm">Katalog Resmi Saji Catering by IICC (PT BLST IPB)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3 py-1 rounded bg-white/10 hover:bg-white/20 text-xs text-white font-semibold cursor-pointer">
+            Cetak / PDF
+          </button>
+          <button onclick="closeCatalogModal()" class="p-1 text-white/70 hover:text-white rounded cursor-pointer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Catalog Scrollable Body -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-slate-800 text-xs">
+        <div class="text-center space-y-2 border-b border-slate-200 pb-4">
+          <h2 class="text-2xl font-black text-slate-900">Katalog Layanan Katering Resmi</h2>
+          <p class="text-slate-600">IPB International Convention Center • PT BLST Holding Company of IPB University</p>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="text-sm font-bold text-[#063694] border-b pb-1">1. Paket Meal Box Rp 35.000 (14 Varian A - N)</h3>
+          <p>Lengkap dengan Nasi Putih, Lauk Utama (Ayam/Daging/Ikan), Sayur Segar, Kerupuk, Sambal &amp; Air Mineral.</p>
+          
+          <h3 class="text-sm font-bold text-[#063694] border-b pb-1">2. Paket Meal Box Eksekutif Rp 50.000</h3>
+          <p>Dilengkapi sajian soto &amp; sup Nusantara hangat (Soto Bandung, Soto Lamongan, Sup Iga, Rawon, Sup Kimlo).</p>
+
+          <h3 class="text-sm font-bold text-[#063694] border-b pb-1">3. Prasmanan Buffet Mulai Rp 75.000 / PAX</h3>
+          <p>Peralatan chafing dish mewah roll-top, meja dekorasi porselen, dan pramusaji profesional IICC.</p>
+
+          <h3 class="text-sm font-bold text-[#063694] border-b pb-1">4. Custom Snack Box (25 Pilihan) Mulai Rp 25.000 / Box</h3>
+          <p>Pilihan pastry manis (Vanilla Sultana, Kaya Twist), snack asin (Risol Mayo, Tahu Bakso), dan kletikan renyah.</p>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-slate-500">
+          <span>WhatsApp Reservasi: 0811-1161-100</span>
+          <span>Gedung Botani Square Mall Lt. 2, Kota Bogor</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= APP LOGIC & DATA SCRIPTS ================= -->
+  <script>
+    // --- 1. DATA DEFINITIONS ---
+    const menuBox35kData = [
+      { code: 'Menu A', title: 'Ayam Goreng Lengkuas', items: ['Nasi Putih', 'Ayam Grg Lengkuas', 'Capcay Bakso', 'Tahu Tempe Goreng', 'Sambal & Kerupuk'] },
+      { code: 'Menu B', title: 'Ayam Bakar Madu', items: ['Nasi Putih', 'Ayam Bakar Madu', 'Tumis Buncis Jagung', 'Perkedel Kentang', 'Sambal & Kerupuk'] },
+      { code: 'Menu C', title: 'Ayam Rica-Rica', items: ['Nasi Putih', 'Ayam Rica Pedas', 'Buncis Wortel Saus Tiram', 'Bakwan Jagung', 'Sambal & Kerupuk'] },
+      { code: 'Menu D', title: 'Ayam Suwir Bali', items: ['Nasi Putih', 'Ayam Suwir Bumbu Bali', 'Urap Sayur Segar', 'Tempe Orek Manis', 'Sambal Matah & Kerupuk'] },
+      { code: 'Menu E', title: 'Ayam Teriyaki Wijen', items: ['Nasi Putih', 'Ayam Teriyaki Wijen', 'Kroket Sayur', 'Salad Sayur Mayones', 'Kerupuk'] },
+      { code: 'Menu F', title: 'Ayam Lada Hitam', items: ['Nasi Putih', 'Ayam Saus Blackpepper', 'Sapo Tahu Jamur', 'Telur Balado 1/2', 'Kerupuk'] },
+      { code: 'Menu G', title: 'Rendang Sapi Padang', items: ['Nasi Putih', 'Rendang Daging Sapi', 'Gulai Daun Singkong', 'Kering Kentang Mustofa', 'Sambal Ijo & Kerupuk'] },
+      { code: 'Menu H', title: 'Empal Gepuk Serundeng', items: ['Nasi Putih', 'Empal Daging Gepuk', 'Sayur Asem Khas Sunda', 'Tahu Bacem Gurih', 'Sambal Terasi & Kerupuk'] },
+      { code: 'Menu I', title: 'Semur Daging Sapi', items: ['Nasi Putih', 'Semur Daging Kentang', 'Tumis Buncis Wortel', 'Perkedel Jagung', 'Sambal & Kerupuk'] },
+      { code: 'Menu J', title: 'Daging Balado Crispy', items: ['Nasi Putih', 'Daging Sapi Balado', 'Oseng Daun Pepaya', 'Tempe Goreng Tepung', 'Kerupuk'] },
+      { code: 'Menu K', title: 'Gurame Asam Manis', items: ['Nasi Putih', 'Fillet Gurame Crispy', 'Cah Pakcoy Bawang Putih', 'Tahu Isi Sayur', 'Kerupuk'] },
+      { code: 'Menu L', title: 'Ikan Bakar Jimbaran', items: ['Nasi Putih', 'Fillet Ikan Bumbu Bali', 'Plecing Kangkung', 'Kacang Goreng Bawang', 'Sambal Matah & Kerupuk'] },
+      { code: 'Menu M', title: 'Dori Sambal Matah', items: ['Nasi Putih', 'Dori Crispy Bumbu Rempah', 'Tumis Kangkung Belacan', 'Tempe Mendoan', 'Kerupuk'] },
+      { code: 'Menu N', title: 'Kakap Saus Tiram', items: ['Nasi Putih', 'Kakap Fillet Saus Tiram', 'Brokoli Cah Bawang Putih', 'Telur Dadar Gulung', 'Kerupuk'] }
+    ];
+
+    const menuBox50kData = [
+      { code: 'Menu A', title: 'Ayam Lengkuas + Soto Bandung', items: ['Nasi Putih', 'Ayam Goreng Lengkuas', 'Soto Bandung Hangat', 'Tahu Tempe Goreng', 'Sambal, Jeruk Nipis & Kerupuk'] },
+      { code: 'Menu B', title: 'Ayam Bakar + Soto Lamongan', items: ['Nasi Putih', 'Ayam Bakar Madu', 'Soto Ayam Lamongan Koya', 'Perkedel Kentang', 'Sambal & Kerupuk'] },
+      { code: 'Menu C', title: 'Ayam Rica + Sup Jagung Manis', items: ['Nasi Putih', 'Ayam Rica Pedas', 'Sup Jagung Manis Sosis', 'Bakwan Jagung Renyah', 'Sambal & Kerupuk'] },
+      { code: 'Menu D', title: 'Ayam Suwir Bali + Sup Kimlo', items: ['Nasi Putih', 'Ayam Suwir Bali', 'Sup Kimlo Jamur Kuping', 'Tempe Orek Manis', 'Sambal Matah & Kerupuk'] },
+      { code: 'Menu E', title: 'Ayam Teriyaki + Sup Miso', items: ['Nasi Putih', 'Ayam Teriyaki Wijen', 'Sup Miso Tofu Wakame', 'Salad Mayones', 'Kerupuk'] },
+      { code: 'Menu F', title: 'Ayam Lada Hitam + Sup Asparagus', items: ['Nasi Putih', 'Ayam Lada Hitam', 'Sup Asparagus Kepiting', 'Telur Balado 1/2', 'Kerupuk'] },
+      { code: 'Menu G', title: 'Rendang Sapi + Soto Padang', items: ['Nasi Putih', 'Rendang Daging Sapi', 'Soto Daging Padang Soun', 'Kering Kentang Mustofa', 'Sambal Ijo & Kerupuk'] },
+      { code: 'Menu H', title: 'Empal Gepuk + Sayur Asem', items: ['Nasi Putih', 'Empal Gepuk Serundeng', 'Sayur Asem Khas Sunda', 'Tahu Bacem Gurih', 'Sambal Terasi & Kerupuk'] }
+    ];
+
+    const bentoData = [
+      { name: 'Nasi Liwet Daging Sapi Komplit', price: 'Rp 75.000', desc: 'Nasi liwet kasturi wangi, empal daging sapi serundeng, ayam suwir pedas gurih, telur pindang, lalapan segar & sambal bajak.', img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=80' },
+      { name: 'Nasi Timbel Gepuk Parahyangan', price: 'Rp 65.000', desc: 'Nasi bungkus daun pisang, empal daging gepuk, ayam goreng lengkuas, tahu & tempe bacem, sayur asem segar & sambal terasi.', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&auto=format&fit=crop&q=80' },
+      { name: 'Nasi Liwet Ayam Suwir Bakar', price: 'Rp 55.000', desc: 'Nasi gurih daun jeruk, ayam bakar bumbu rujak, tumis buncis bakso, tahu goreng garing, kerupuk udang & sambal mangga.', img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&auto=format&fit=crop&q=80' },
+      { name: 'Nasi Bali Megibung', price: 'Rp 50.000', desc: 'Ayam suwir bumbu betutu pedas, sate lilit ikan dori, urap sayur bumbu kelapa panggang, telur balado & sambal matah otentik.', img: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&auto=format&fit=crop&q=80' },
+      { name: 'Japanese VIP Bento', price: 'Rp 50.000', desc: 'Chicken katsu renyah, beef teriyaki saus manis wijen, ebi furai udang, salad wortel mayones & nasi Jepang pulen.', img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&auto=format&fit=crop&q=80' },
+      { name: 'Chinese Deluxe Bento', price: 'Rp 35.000', desc: 'Ayam koloke asam manis, capcay seafood kuah kental, pangsit goreng renyah isi ayam & nasi putih wangi.', img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&auto=format&fit=crop&q=80' }
+    ];
+
+    const snackData = [
+      // Manis (10)
+      { id: 'sm-1', name: 'Vanilla Sultana', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-2', name: 'Kaya Twist Pastry', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-3', name: 'Pandan Lattice', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-4', name: 'Banana Soft Cake', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-5', name: 'Fudgy Brownies Cokelat', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-6', name: 'Apple Pie Cinnamon', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-7', name: 'American Chocolate', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-8', name: 'Cream Puff Eclair', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-9', name: 'Marmer Cake Butter', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sm-10', name: 'Lemon Glazed Cake', category: 'manis', label: 'Snack Manis', img: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=300&auto=format&fit=crop&q=80' },
+      // Asin (10)
+      { id: 'sa-1', name: 'Tahu Bakso Sapi', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-2', name: 'Sosis Solo Daging', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-3', name: 'Risol Mayo Smoked Beef', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-4', name: 'Samosa Kari Daging', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-5', name: 'Macaroni Schotel Keju', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-6', name: 'Sosis Roll Puff Pastry', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-7', name: 'Asinan Buah Segar', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-8', name: 'Tempe Mendoan Gurih', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-9', name: 'Holland Kroket Daging', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sa-10', name: 'Bitterballen Melted', category: 'asin', label: 'Snack Asin', img: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&auto=format&fit=crop&q=80' },
+      // Kletikan (5)
+      { id: 'sk-1', name: 'Keripik Singkong Balado', category: 'kletikan', label: 'Kletikan Renyah', img: 'https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sk-2', name: 'Telur Gabus Gurih', category: 'kletikan', label: 'Kletikan Renyah', img: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sk-3', name: 'Kacang Telur Spesial', category: 'kletikan', label: 'Kletikan Renyah', img: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sk-4', name: 'Keripik Pisang Madu', category: 'kletikan', label: 'Kletikan Renyah', img: 'https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=300&auto=format&fit=crop&q=80' },
+      { id: 'sk-5', name: 'Talas Stick Khas Bogor', category: 'kletikan', label: 'Kletikan Renyah', img: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=300&auto=format&fit=crop&q=80' }
+    ];
+
+    let selectedSnackIds = ['sm-1', 'sa-3', 'sk-1'];
+    let snackBoxQuantity = 30;
+
+    // --- 2. RENDER FUNCTIONS ---
+    function renderMenu35k() {
+      const container = document.getElementById('content-box35k');
+      container.innerHTML = menuBox35kData.map(v => `
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-xs hover:border-[#063694] transition-all space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="bg-[#063694] text-white text-[10px] font-bold px-2 py-0.5 rounded">${v.code}</span>
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Rp 35.000</span>
+          </div>
+          <h4 class="font-bold text-sm text-slate-900 line-clamp-1">${v.title}</h4>
+          <ul class="text-xs text-slate-600 space-y-1">
+            ${v.items.map(i => `<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#063694]"></span>${i}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+    }
+
+    function renderMenu50k() {
+      const container = document.getElementById('content-box50k');
+      container.innerHTML = menuBox50kData.map(v => `
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-xs hover:border-[#063694] transition-all space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="bg-[#063694] text-white text-[10px] font-bold px-2 py-0.5 rounded">${v.code}</span>
+            <span class="text-xs font-bold text-[#063694] bg-blue-50 px-2 py-0.5 rounded-full">Rp 50.000</span>
+          </div>
+          <h4 class="font-bold text-sm text-slate-900 line-clamp-1">${v.title}</h4>
+          <ul class="text-xs text-slate-600 space-y-1">
+            ${v.items.map(i => `<li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>${i}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+    }
+
+    function renderBento() {
+      const container = document.getElementById('content-bento');
+      container.innerHTML = bentoData.map(b => `
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+          <img src="${b.img}" alt="${b.name}" class="w-full h-44 object-cover" />
+          <div class="p-5 space-y-3">
+            <div class="flex justify-between items-start gap-2">
+              <h4 class="font-bold text-sm text-slate-900">${b.name}</h4>
+              <span class="text-xs font-black text-[#063694] bg-blue-50 px-2.5 py-1 rounded-full whitespace-nowrap">${b.price}</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">${b.desc}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderSnacks(category = 'all') {
+      const container = document.getElementById('snack-items-container');
+      const filtered = category === 'all' ? snackData : snackData.filter(s => s.category === category);
+      
+      container.innerHTML = filtered.map(s => {
+        const isSelected = selectedSnackIds.includes(s.id);
+        return `
+          <div onclick="toggleSnack('${s.id}')" class="flex flex-col items-center text-center p-3 rounded-2xl cursor-pointer transition-all border select-none group ${isSelected ? 'bg-blue-50/80 border-[#063694] ring-2 ring-[#063694]/20 shadow-md' : 'bg-white border-slate-200 hover:border-[#063694]/50 shadow-2xs'}">
+            <div class="relative w-24 h-24 rounded-full border-2 border-slate-200 overflow-hidden mb-2 shadow-inner">
+              <img src="${s.img}" alt="${s.name}" class="w-full h-full object-cover transition-transform group-hover:scale-110" />
+              ${isSelected ? `<div class="absolute inset-0 bg-[#063694]/40 flex items-center justify-center"><div class="w-7 h-7 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow font-bold text-sm">✓</div></div>` : ''}
+            </div>
+            <span class="text-xs font-bold ${isSelected ? 'text-[#063694]' : 'text-slate-800'} line-clamp-2">${s.name}</span>
+            <span class="text-[10px] text-slate-400 mt-0.5">${s.label}</span>
+            <span class="mt-2 text-[10px] px-2 py-0.5 rounded-full font-bold ${isSelected ? 'bg-[#063694] text-white' : 'bg-slate-100 text-slate-500'}">${isSelected ? 'Terpilih' : '+ Pilih'}</span>
+          </div>
+        `;
+      }).join('');
+
+      updateSnackSummary();
+    }
+
+    function toggleSnack(id) {
+      if (selectedSnackIds.includes(id)) {
+        selectedSnackIds = selectedSnackIds.filter(item => item !== id);
+      } else {
+        selectedSnackIds.push(id);
+      }
+      renderSnacks(currentSnackCategory);
+    }
+
+    let currentSnackCategory = 'all';
+    function filterSnackCategory(cat) {
+      currentSnackCategory = cat;
+      document.querySelectorAll('.snack-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-[#063694]', 'text-white');
+        btn.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      const activeBtn = document.getElementById(`snack-cat-${cat}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-100', 'text-slate-700');
+        activeBtn.classList.add('bg-[#063694]', 'text-white');
+      }
+      renderSnacks(cat);
+    }
+
+    function selectRecommendedSnacks() {
+      selectedSnackIds = ['sm-5', 'sa-3', 'sk-5'];
+      renderSnacks(currentSnackCategory);
+    }
+
+    function resetSnackSelection() {
+      selectedSnackIds = [];
+      renderSnacks(currentSnackCategory);
+    }
+
+    function changeSnackQuantity(delta) {
+      snackBoxQuantity = Math.max(10, snackBoxQuantity + delta);
+      document.getElementById('snack-box-qty').innerText = `${snackBoxQuantity} Box`;
+      updateSnackSummary();
+    }
+
+    function updateSnackSummary() {
+      document.getElementById('selected-snack-count').innerText = `${selectedSnackIds.length} Snack Terpilih`;
+      const selectedObj = snackData.filter(s => selectedSnackIds.includes(s.id));
+      document.getElementById('selected-snack-names').innerText = selectedObj.length > 0 
+        ? selectedObj.map(s => s.name).join(' • ') 
+        : 'Silakan pilih camilan di atas';
+
+      const pricePerBox = selectedSnackIds.length <= 3 ? 25000 : 25000 + (selectedSnackIds.length - 3) * 7000;
+      const total = pricePerBox * snackBoxQuantity;
+      document.getElementById('snack-total-price').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+    }
+
+    function sendSnackOrderWhatsApp() {
+      const selectedObj = snackData.filter(s => selectedSnackIds.includes(s.id));
+      if (selectedObj.length === 0) return alert('Silakan pilih minimal 1 item snack terlebih dahulu.');
+      
+      const itemsList = selectedObj.map((s, i) => `${i + 1}. ${s.name} (${s.label})`).join('%0A');
+      const pricePerBox = selectedSnackIds.length <= 3 ? 25000 : 25000 + (selectedSnackIds.length - 3) * 7000;
+      const total = pricePerBox * snackBoxQuantity;
+      
+      const msg = `Halo Saji Catering by IICC, saya ingin pesan *Custom Snack Box*:%0A%0A📦 *Jumlah:* ${snackBoxQuantity} Box%0A🍽️ *Item Terpilih:*%0A${itemsList}%0A%0A💰 *Estimasi Total:* Rp ${total.toLocaleString('id-ID')}%0A%0AMohon konfirmasi ketersediaan & penawaran resminya.`;
+      window.open(`https://wa.me/628111161100?text=${msg}`, '_blank');
+    }
+
+    // --- 3. MENU TABS SWITCHER ---
+    function switchMenuTab(tab) {
+      document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-[#063694]', 'text-white');
+        btn.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      document.querySelectorAll('.menu-tab-content').forEach(c => c.classList.add('hidden'));
+
+      document.getElementById(`tab-${tab}`).classList.remove('bg-slate-100', 'text-slate-700');
+      document.getElementById(`tab-${tab}`).classList.add('bg-[#063694]', 'text-white');
+      document.getElementById(`content-${tab}`).classList.remove('hidden');
+    }
+
+    // --- 4. CALCULATOR LOGIC ---
+    let calcService = 'mealbox';
+    let calcPackagePrice = 35000;
+
+    const calcPackages = {
+      mealbox: [{ name: 'Paket Rp 35k', price: 35000 }, { name: 'Paket Rp 50k (+Sup)', price: 50000 }, { name: 'Bento VIP 75k', price: 75000 }],
+      prasmanan: [{ name: 'Standard 75k/pax', price: 75000 }, { name: 'Deluxe 95k/pax', price: 95000 }],
+      wedding: [{ name: 'Royal 125k/pax', price: 125000 }, { name: 'Grand Palace 165k/pax', price: 165000 }]
+    };
+
+    function setCalcService(srv, defaultPrice) {
+      calcService = srv;
+      calcPackagePrice = defaultPrice;
+
+      document.querySelectorAll('.calc-srv-btn').forEach(b => {
+        b.classList.remove('bg-[#D4AF37]', 'text-slate-950');
+        b.classList.add('bg-white/10', 'text-white');
+      });
+      document.getElementById(`calc-srv-${srv}`).classList.remove('bg-white/10', 'text-white');
+      document.getElementById(`calc-srv-${srv}`).classList.add('bg-[#D4AF37]', 'text-slate-950');
+
+      renderCalcPackageOptions();
+      updateCalculator();
+    }
+
+    function renderCalcPackageOptions() {
+      const container = document.getElementById('calc-package-options');
+      const pkgs = calcPackages[calcService];
+      container.innerHTML = pkgs.map(p => `
+        <button type="button" onclick="setCalcPackage(${p.price})" class="calc-pkg-btn p-2.5 rounded-xl border text-center transition-all cursor-pointer ${calcPackagePrice === p.price ? 'bg-white text-[#063694] font-bold border-white' : 'border-white/20 text-white hover:bg-white/10'}">
+          ${p.name}
+        </button>
+      `).join('');
+    }
+
+    function setCalcPackage(price) {
+      calcPackagePrice = price;
+      renderCalcPackageOptions();
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const pax = parseInt(document.getElementById('calc-pax-slider').value);
+      const includeSnack = document.getElementById('calc-addon-snack').checked;
+      const includeWater = document.getElementById('calc-addon-water').checked;
+
+      document.getElementById('calc-pax-display').innerText = `${pax} Pax`;
+      document.getElementById('calc-summary-pax').innerText = `${pax} Orang`;
+
+      const mainCost = pax * calcPackagePrice;
+      const snackCost = includeSnack ? pax * 25000 : 0;
+      const waterCost = includeWater ? pax * 3000 : 0;
+      const totalCost = mainCost + snackCost + waterCost;
+
+      document.getElementById('calc-cost-main').innerText = `Rp ${mainCost.toLocaleString('id-ID')}`;
+      document.getElementById('calc-cost-snack').innerText = `Rp ${snackCost.toLocaleString('id-ID')}`;
+      document.getElementById('calc-cost-water').innerText = `Rp ${waterCost.toLocaleString('id-ID')}`;
+      
+      document.getElementById('calc-row-snack').classList.toggle('hidden', !includeSnack);
+      document.getElementById('calc-row-water').classList.toggle('hidden', !includeWater);
+
+      document.getElementById('calc-total-cost').innerText = `Rp ${totalCost.toLocaleString('id-ID')}`;
+    }
+
+    function sendQuotationWhatsApp() {
+      const pax = document.getElementById('calc-pax-slider').value;
+      const includeSnack = document.getElementById('calc-addon-snack').checked;
+      const includeWater = document.getElementById('calc-addon-water').checked;
+      const total = document.getElementById('calc-total-cost').innerText;
+
+      const msg = `Halo Saji Catering by IICC, saya telah menghitung estimasi katering:%0A%0A📌 *Layanan:* ${calcService.toUpperCase()}%0A👥 *Jumlah:* ${pax} Orang%0A🍱 *Paket:* Rp ${calcPackagePrice.toLocaleString('id-ID')}/pax%0A☕ *Snack Box:* ${includeSnack ? 'Ya (Rp 25.000)' : 'Tidak'}%0A💧 *Air Mineral:* ${includeWater ? 'Ya (Rp 3.000)' : 'Tidak'}%0A💰 *Total Estimasi:* ${total}%0A%0AMohon bantuan pembuatan Surat Penawaran Harga (SPH) resmi.`;
+      window.open(`https://wa.me/628111161100?text=${msg}`, '_blank');
+    }
+
+    // --- 5. ACCORDION & MODALS ---
+    function toggleTerm(id) {
+      const body = document.getElementById(`${id}-body`);
+      const icon = document.getElementById(`${id}-icon`);
+      body.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-drawer').classList.toggle('hidden');
+    }
+
+    function openCatalogModal() {
+      document.getElementById('catalog-modal').classList.remove('hidden');
+    }
+
+    function closeCatalogModal() {
+      document.getElementById('catalog-modal').classList.add('hidden');
+    }
+
+    // --- INITIALIZE ON LOAD ---
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMenu35k();
+      renderMenu50k();
+      renderBento();
+      renderSnacks();
+      renderCalcPackageOptions();
+      updateCalculator();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
