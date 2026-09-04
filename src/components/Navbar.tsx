@@ -59,14 +59,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
   return (
     <header
       id="main-navbar"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      style={{ height: '92px' }}
+      className={`fixed top-0 left-0 right-0 z-50 h-[92px] flex items-center transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3'
-          : 'bg-white/80 backdrop-blur-sm border-b border-slate-100 py-4 sm:py-5'
+          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80'
+          : 'bg-white/80 backdrop-blur-sm border-b border-slate-100'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-[74px] w-[1210px] max-w-full">
           {/* Left: Logo Container */}
           <a
             id="nav-logo-link"

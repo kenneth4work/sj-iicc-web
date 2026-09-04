@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowDown, Download, Award, ShieldCheck, Utensils, Star, CheckCircle, MapPin } from 'lucide-react';
 import { companyInfo } from '../data/cateringData.ts';
 import snackBoxHeroImg from '../assets/images/regenerated_image_1788492937077.png';
+import mealBoxHeroImg from '../assets/images/regenerated_image_1788503660469.png';
 
 interface HeroSectionProps {
   onOpenCatalog: () => void;
@@ -94,7 +95,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCatalog, onScrol
             </div>
 
             {/* Quality Commitment Quote */}
-            <div className="pt-2 border-l-2 border-[#D4AF37] pl-3 italic text-xs text-slate-500 max-w-xl">
+            <div
+              style={{ fontSize: '13px', lineHeight: '10px' }}
+              className="pt-2 border-l-2 border-[#D4AF37] pl-3 italic text-[13px] leading-[10px] text-slate-500 max-w-xl"
+            >
               &ldquo;{companyInfo.quoteMotto}&rdquo;
             </div>
           </div>
@@ -128,7 +132,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCatalog, onScrol
                 {/* Bento / Meal Box Card */}
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white bg-white group">
                   <img
-                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
+                    src={mealBoxHeroImg}
                     alt="Meal Box Saji Catering"
                     className="w-full h-32 sm:h-36 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -164,7 +168,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCatalog, onScrol
               </div>
 
               {/* Floating Review Badge */}
-              <div className="absolute -bottom-3 -right-3 bg-white/95 backdrop-blur-md rounded-2xl py-2 px-3.5 shadow-xl border border-slate-100 flex items-center gap-2">
+              <div
+                style={{ paddingLeft: '13px', paddingRight: '13px', paddingTop: '0px', paddingBottom: '2px' }}
+                className="absolute -bottom-3 -right-3 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2"
+              >
                 <div className="flex text-[#D4AF37]">
                   {'★★★★★'.split('').map((s, i) => (
                     <span key={i} className="text-xs">{s}</span>

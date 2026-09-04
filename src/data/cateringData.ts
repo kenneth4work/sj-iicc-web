@@ -31,6 +31,7 @@ import spec5Img from '../assets/images/regenerated_image_1788492340495.png';
 import spec6Img from '../assets/images/regenerated_image_1788492358759.png';
 import spec7Img from '../assets/images/regenerated_image_1788492361183.png';
 import spec8Img from '../assets/images/regenerated_image_1788492363192.png';
+import mealBoxEkonomisImg from '../assets/images/regenerated_image_1788506826450.png';
 
 export interface MenuItemDetail {
   id: string;
@@ -746,7 +747,7 @@ export const cateringPackagesSummary = [
     priceDisplay: 'Rp 35.000 / Box',
     minOrder: 'Min. 20 Box',
     subtitle: 'Solusi Rapat & Acara Praktis Berkualitas',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+    image: mealBoxEkonomisImg,
     badge: 'Paling Populer',
     badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-300',
     description: '14 pilihan varian menu (Menu A - N) dengan komposisi seimbang karbohidrat, lauk utama, tumisan sayur segar, kerupuk, dan sambal khas.',
