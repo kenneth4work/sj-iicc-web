@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown, Download, Award, ShieldCheck, Utensils, Star, CheckCircle, MapPin } from 'lucide-react';
 import { companyInfo } from '../data/cateringData.ts';
+import snackBoxHeroImg from '../assets/images/regenerated_image_1788492937077.png';
 
 interface HeroSectionProps {
   onOpenCatalog: () => void;
@@ -140,7 +141,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCatalog, onScrol
                 {/* Custom Snack Box Card */}
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white bg-white group">
                   <img
-                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                    src={snackBoxHeroImg}
                     alt="Snack Box Saji Catering"
                     className="w-full h-32 sm:h-36 object-cover transition-transform duration-500 group-hover:scale-105"
                   />

@@ -1,3 +1,37 @@
+import vanillaSultanaImg from '../assets/images/regenerated_image_1788486172290.png';
+import kayaTwistImg from '../assets/images/regenerated_image_1788486566369.png';
+import pandanLatticeImg from '../assets/images/regenerated_image_1788486567352.png';
+import bananaCakeImg from '../assets/images/regenerated_image_1788486568280.png';
+import fudgyBrowniesImg from '../assets/images/regenerated_image_1788486569008.png';
+import applePieImg from '../assets/images/regenerated_image_1788486569745.png';
+import chocolateCakeImg from '../assets/images/regenerated_image_1788486570551.png';
+import classicEclairImg from '../assets/images/regenerated_image_1788486571684.png';
+import marmerCakeImg from '../assets/images/regenerated_image_1788486572380.png';
+import lemonCakeImg from '../assets/images/regenerated_image_1788486573068.png';
+import tahuBaksoImg from '../assets/images/regenerated_image_1788489409793.png';
+import sosisSoloImg from '../assets/images/regenerated_image_1788489410745.png';
+import risolMayoImg from '../assets/images/regenerated_image_1788489411667.png';
+import samosaImg from '../assets/images/regenerated_image_1788489412687.png';
+import macaroniSchotelImg from '../assets/images/regenerated_image_1788489413480.png';
+import sosisRollImg from '../assets/images/regenerated_image_1788489414368.png';
+import asinanBuahImg from '../assets/images/regenerated_image_1788489415282.png';
+import tempeMendoanImg from '../assets/images/regenerated_image_1788489416418.png';
+import kroketRagoutImg from '../assets/images/regenerated_image_1788489417224.png';
+import bitterballenImg from '../assets/images/regenerated_image_1788489418356.png';
+import keripikSingkongImg from '../assets/images/regenerated_image_1788489660922.png';
+import telurGabusImg from '../assets/images/regenerated_image_1788489661766.png';
+import kacangTelurImg from '../assets/images/regenerated_image_1788489662578.png';
+import keripikPisangImg from '../assets/images/regenerated_image_1788489663386.png';
+import talasStickImg from '../assets/images/regenerated_image_1788489664240.png';
+import spec1Img from '../assets/images/regenerated_image_1788492343245.png';
+import spec2Img from '../assets/images/regenerated_image_1788492346088.png';
+import spec3Img from '../assets/images/regenerated_image_1788492348985.png';
+import spec4Img from '../assets/images/regenerated_image_1788492351584.png';
+import spec5Img from '../assets/images/regenerated_image_1788492340495.png';
+import spec6Img from '../assets/images/regenerated_image_1788492358759.png';
+import spec7Img from '../assets/images/regenerated_image_1788492361183.png';
+import spec8Img from '../assets/images/regenerated_image_1788492363192.png';
+
 export interface MenuItemDetail {
   id: string;
   code: string;
@@ -218,7 +252,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 75.000',
     minOrder: 'Min. 10 Box',
     description: 'Nasi liwet aromatik gurih bertabur ikan asin, empal gepuk empuk lezat, tahu & tempe goreng, lalapan segar, sambal terasi khas IICC, ikan balado renyah, dan puding cokelat manis.',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+    image: spec1Img,
     badge: 'Best Seller VIP',
     popular: true,
     dishes: ['Nasi Liwet Harum Daun Salam', 'Empal Gepuk Daging Empuk', 'Ikan Balado Renyah', 'Tahu & Tempe Goreng', 'Lalapan Segar + Sambal Terasi', 'Puding Cokelat Dessert']
@@ -233,7 +267,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 65.000',
     minOrder: 'Min. 10 Box',
     description: 'Nasi timbel pulen berbalut daun pisang, empal gepuk lembut bumbu rempah kelapa, tahu goreng kuning, lalapan segar lengkap, sambal terasi cobek, dan puding cokelat.',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80',
+    image: spec2Img,
     badge: 'Favorit Executive',
     popular: true,
     dishes: ['Nasi Timbel Daun Pisang', 'Empal Gepuk Sapi Legit', 'Tahu Goreng Gurih', 'Lalapan Segar Pilihan', 'Sambal Terasi Harum', 'Puding Cokelat Penutup']
@@ -248,7 +282,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 55.000',
     minOrder: 'Min. 10 Box',
     description: 'Nasi liwet kaya rempah dengan ayam goreng bumbu kuning kremes, tahu & tempe goreng, lalapan botani segar, sambal terasi teruji, ikan balado, dan penutup puding cokelat.',
-    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80',
+    image: spec3Img,
     badge: 'Paling Diminati',
     popular: true,
     dishes: ['Nasi Liwet Gurih Rempah', 'Ayam Goreng Lengkuas', 'Ikan Balado Renyah', 'Tahu & Tempe Goreng', 'Lalapan & Sambal Terasi', 'Puding Cokelat Segar']
@@ -263,7 +297,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 50.000',
     minOrder: 'Min. 10 Box',
     description: 'Nasi putih pulen, ayam suwir sambal matah wangi sereh kecombrang, telur pindang gurih, sate lilit ikan khas Gianyar, lawar kacang panjang kelapa bakar, dan dessert puding.',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
+    image: spec4Img,
     badge: 'Eksotis & Segar',
     popular: false,
     dishes: ['Nasi Putih Pulen', 'Ayam Sambal Matah Segar', 'Sate Lilit Tradisional', 'Telur Pindang Bumbu Rempah', 'Lawar Sayur Khas Bali', 'Puding Manis']
@@ -278,7 +312,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 50.000',
     minOrder: 'Min. 10 Box',
     description: 'Bento box modern berstandar hotel: Irisan Beef Teriyaki manis gurih meresap, Chicken Yakiniku panggang wijen, Nasi putih Jepang pulen, Salad bento segar saus mayo wijen, dan puding.',
-    image: 'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=800&q=80',
+    image: spec5Img,
     badge: 'International Choice',
     popular: true,
     dishes: ['Beef Teriyaki Saus Manis Gurih', 'Chicken Yakiniku Panggang Wijen', 'Nasi Putih Pulen Bento', 'Salad Sayur Saus Wijen Jepang', 'Puding Silky']
@@ -293,7 +327,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 50.000',
     minOrder: 'Min. 10 Box',
     description: 'Nasi timbel bungkus daun, ayam goreng rempah kemiri lengkuas, tahu goreng hangat, lalapan kebun segar, sambal terasi harum menggugah selera, dan puding manis.',
-    image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80',
+    image: spec6Img,
     badge: 'Menu Rapat Favorit',
     popular: false,
     dishes: ['Nasi Timbel Daun', 'Ayam Goreng Gurih Parahyangan', 'Tahu Goreng Kuning', 'Lalapan Timun Kemangi Selada', 'Sambal Terasi Segar', 'Puding Cokelat']
@@ -308,7 +342,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 35.000',
     minOrder: 'Min. 10 Box',
     description: 'Ayam Chicken Kungpao dengan saus asam manis pedas berpadu kacang mete, brokoli tumis bawang putih wangi, mie goreng Chinese noodle lembut, dan nasi putih.',
-    image: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80',
+    image: spec7Img,
     badge: 'Oriental Klasik',
     popular: false,
     dishes: ['Chicken Kungpao Saus Istimewa', 'Brokoli Garlic Tumis Segar', 'Chinese Noodle Gurih', 'Nasi Putih Pulen']
@@ -323,7 +357,7 @@ export const specialtyMenuBoxes: MenuItemDetail[] = [
     priceDisplay: 'Rp 35.000',
     minOrder: 'Min. 10 Box',
     description: 'Paket rames komplit kaya lauk: Nasi putih, ayam goreng renyah bumbu ungkep, tempe orek manis pedas, telur balado merah merona, lalapan segar, dan sambal pedas nikmat.',
-    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80',
+    image: spec8Img,
     badge: 'Ekonomis Komplit',
     popular: false,
     dishes: ['Nasi Putih Gurih', 'Ayam Goreng Ungkep', 'Telur Balado Merah', 'Tempe Orek Manis Pedas', 'Lalapan Segar + Sambal']
@@ -426,7 +460,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Vanilla Sultana',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80',
+    image: vanillaSultanaImg,
     description: 'Pastry pastry spiral renyah dengan krim vanilla lembut dan kismis sultana manis alami.'
   },
   {
@@ -434,7 +468,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Kaya Twist',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80',
+    image: kayaTwistImg,
     description: 'Danish pastry kepang bertabur gula dengan selai srikaya pandan wangi gurih.'
   },
   {
@@ -442,7 +476,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Pandan Lattice',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=400&q=80',
+    image: pandanLatticeImg,
     description: 'Pastry anyam dengan aroma pandan suji asli dan isian krim lembut memanjakan lidah.'
   },
   {
@@ -450,7 +484,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Banana Cake',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=400&q=80',
+    image: bananaCakeImg,
     description: 'Bolu pisang lembut moist dengan potongan pisang raja asli dan aroma karamel.'
   },
   {
@@ -458,7 +492,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Fudgy Brownies',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=400&q=80',
+    image: fudgyBrowniesImg,
     description: 'Brownies cokelat Belgia pekat dengan tekstur fudgy dan kerak shiny crust lezat.'
   },
   {
@@ -466,7 +500,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Apple Pie',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=400&q=80',
+    image: applePieImg,
     description: 'Pie renyah mentega dengan isian apel Malang manis asam bumbu kayu manis aromatik.'
   },
   {
@@ -474,7 +508,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'American Chocolate Cake',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80',
+    image: chocolateCakeImg,
     description: 'Kue cokelat klasik Amerika dengan ganache pekat dan sentuhan cokelat leleh mewah.'
   },
   {
@@ -482,7 +516,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Classic Eclair',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1525151554767-6579f68b6697?auto=format&fit=crop&w=400&q=80',
+    image: classicEclairImg,
     description: 'Sus panjang lembut dengan isian pastry cream vanilla diplomat dan glazing cokelat.'
   },
   {
@@ -490,7 +524,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Marmer Cake Premium',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=400&q=80',
+    image: marmerCakeImg,
     description: 'Bolu marmer klasik butter Wijsman beraroma harum vanila dan cokelat Belanda.'
   },
   {
@@ -498,7 +532,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Lemon Cake Glaze',
     category: 'manis',
     categoryLabel: 'Snack Manis',
-    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=400&q=80',
+    image: lemonCakeImg,
     description: 'Cake lembut dengan perasan sari lemon segar dan lapisan gula glaze asam manis segar.'
   },
 
@@ -508,7 +542,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Tahu Bakso Sapi',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=400&q=80',
+    image: tahuBaksoImg,
     description: 'Tahu pong gurih padat berisi adonan bakso daging sapi cincang berbumbu bawang putih.'
   },
   {
@@ -516,7 +550,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Sosis Solo Suwir Ayam',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=400&q=80',
+    image: sosisSoloImg,
     description: 'Dadar telur tipis lembut membungkus cincangan daging ayam gurih bumbu santan Solo.'
   },
   {
@@ -524,7 +558,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Risol Mayo Smoked Beef',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80',
+    image: risolMayoImg,
     description: 'Risol panir krispi keemasan dengan isian smoked beef gurih, telur rebus, dan creamy mayo.'
   },
   {
@@ -532,7 +566,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Samosa Kari Daging',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1601050690187-21a4f009b0b4?auto=format&fit=crop&w=400&q=80',
+    image: samosaImg,
     description: 'Pastry segitiga super renyah berisi kentang dan daging cincang bumbu rempah kari wangi.'
   },
   {
@@ -540,7 +574,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Macaroni Schotel Panggang',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=400&q=80',
+    image: macaroniSchotelImg,
     description: 'Macaroni pasta panggang dengan keju cheddar melimpah, daging sapi giling, dan susu gurih.'
   },
   {
@@ -548,7 +582,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Sosis Roll Pastry',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1621996346565-e3d5d6281729?auto=format&fit=crop&w=400&q=80',
+    image: sosisRollImg,
     description: 'Sosis sapi premium berbalut puff pastry gurih berlapis mentega yang dipanggang renyah.'
   },
   {
@@ -556,7 +590,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Asinan Buah Botani Segar',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80',
+    image: asinanBuahImg,
     description: 'Potongan buah segar mangga, kedondong, nanas, jambu dengan kuah asinan merah khas Bogor.'
   },
   {
@@ -564,7 +598,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Tempe Mendoan Daun Bawang',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80',
+    image: tempeMendoanImg,
     description: 'Tempe kedelai berbalut adonan tepung berbumbu ketumbar dan daun bawang dengan cocolan sambal kecap.'
   },
   {
@@ -572,7 +606,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Holland Kroket Ragout',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80',
+    image: kroketRagoutImg,
     description: 'Kroket kentang lumer berisikan ragout ayam wortel creamy khas resep peninggalan Belanda.'
   },
   {
@@ -580,7 +614,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Bitterballen Keju Daging',
     category: 'asin',
     categoryLabel: 'Snack Asin',
-    image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=400&q=80',
+    image: bitterballenImg,
     description: 'Bola-bola daging lezat dengan adonan roux keju leleh, dibalut tepung panir keemasan.'
   },
 
@@ -590,7 +624,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Keripik Singkong Balado',
     category: 'kletikan',
     categoryLabel: 'Kletikan Renyah',
-    image: 'https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=400&q=80',
+    image: keripikSingkongImg,
     description: 'Keripik singkong renyah tipis dengan balutan karamel cabai balado manis pedas gurih.'
   },
   {
@@ -598,7 +632,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Telur Gabus Asin Gurih',
     category: 'kletikan',
     categoryLabel: 'Kletikan Renyah',
-    image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=400&q=80',
+    image: telurGabusImg,
     description: 'Camilan tradisional tepung tapioka dan keju gurih renyah tanpa bahan pengawet.'
   },
   {
@@ -606,7 +640,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Kacang Telur Spesial',
     category: 'kletikan',
     categoryLabel: 'Kletikan Renyah',
-    image: 'https://images.unsplash.com/photo-1536591375315-1b838421a37c?auto=format&fit=crop&w=400&q=80',
+    image: kacangTelurImg,
     description: 'Kacang tanah pilihan dibalut tepung telur manis gurih renyah tahan lama.'
   },
   {
@@ -614,7 +648,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Keripik Pisang Madu',
     category: 'kletikan',
     categoryLabel: 'Kletikan Renyah',
-    image: 'https://images.unsplash.com/photo-1600189083288-ce9e763b3203?auto=format&fit=crop&w=400&q=80',
+    image: keripikPisangImg,
     description: 'Irisan pisang kepok pilihan digoreng krispi dengan lapisan madu manis legit.'
   },
   {
@@ -622,7 +656,7 @@ export const snackItemsData: SnackItem[] = [
     name: 'Talas Stick Gurih Bogor',
     category: 'kletikan',
     categoryLabel: 'Kletikan Renyah',
-    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=400&q=80',
+    image: talasStickImg,
     description: 'Stik talas asli Bogor renyah asin bertabur garam laut dan bumbu gurih khas.'
   }
 ];
