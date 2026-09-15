@@ -32,6 +32,7 @@ import spec6Img from '../assets/images/regenerated_image_1788492358759.png';
 import spec7Img from '../assets/images/regenerated_image_1788492361183.png';
 import spec8Img from '../assets/images/regenerated_image_1788492363192.png';
 import mealBoxEkonomisImg from '../assets/images/regenerated_image_1788506826450.png';
+import mealBoxEksekutifImg from '../assets/images/regenerated_image_1789437653844.png';
 
 export interface MenuItemDetail {
   id: string;
@@ -771,7 +772,7 @@ export const cateringPackagesSummary = [
     priceDisplay: 'Rp 50.000 / Box',
     minOrder: 'Min. 20 Box',
     subtitle: 'Paket Komplit dengan Sajian Sup & Soto Hangat',
-    image: 'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=800&q=80',
+    image: mealBoxEksekutifImg,
     badge: 'Executive Set',
     badgeColor: 'bg-blue-100 text-[#063694] border-blue-300',
     description: '14 variasi paket lengkap (Menu A - N) dilengkapi dengan sup atau soto khas Nusantara hangat yang kaya rempah (Soto Bogor, Betawi, Tomyam, Banjar, Cotto Makassar).',

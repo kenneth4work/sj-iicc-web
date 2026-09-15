@@ -100,16 +100,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
 
           {/* Right: Custom Pill CTA Button matching reference UI */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0 flex-nowrap">
-            <button
+            <a
               id="nav-download-catalog-btn"
-              onClick={onOpenCatalog}
-              type="button"
+              href="/Katalog-Menu-Botani-Catering-IICC.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Katalog-Menu-Botani-Catering-IICC.pdf"
               className="text-xs font-semibold text-slate-600 hover:text-[#063694] flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-blue-50/60 transition-colors cursor-pointer whitespace-nowrap shrink-0"
-              title="Lihat & Unduh PDF Katalog"
+              title="Buka & Unduh PDF Katalog"
             >
               <FileText className="w-3.5 h-3.5 text-[#063694] shrink-0" />
               <span className="whitespace-nowrap">Unduh Katalog (PDF)</span>
-            </button>
+            </a>
 
             <button
               id="nav-cta-order-btn"
@@ -172,17 +174,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
             ))}
 
             <div className="pt-3 mt-2 border-t border-slate-100 flex flex-col gap-2">
-              <button
+              <a
                 id="mobile-catalog-btn"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenCatalog();
-                }}
+                href="/Katalog-Menu-Botani-Catering-IICC.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Katalog-Menu-Botani-Catering-IICC.pdf"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50"
               >
                 <FileText className="w-4 h-4 text-[#063694]" />
                 <span>Unduh Katalog Lengkap (PDF)</span>
-              </button>
+              </a>
 
               <button
                 id="mobile-drawer-cta-btn"

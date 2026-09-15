@@ -82,16 +82,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCatalog, onScrol
                 <ArrowDown className="text-[#D4AF37] w-4 h-4 transition-transform group-hover:translate-y-1" />
               </button>
 
-              {/* Secondary CTA (Download PDF Catalog) */}
-              <button
+              {/* Secondary CTA (Download & Open PDF Catalog) */}
+              <a
                 id="hero-download-catalog-cta"
-                onClick={onOpenCatalog}
-                type="button"
+                href="/Katalog-Menu-Botani-Catering-IICC.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Katalog-Menu-Botani-Catering-IICC.pdf"
                 className="border-2 border-slate-200 bg-white text-slate-700 hover:border-[#063694] hover:text-[#063694] hover:bg-blue-50/40 px-6 py-3.5 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-200 shadow-xs cursor-pointer"
+                title="Buka / Unduh Katalog Menu PDF Resmi"
               >
                 <Download className="w-4 h-4 text-[#063694]" />
                 <span>Unduh Katalog Menu (PDF)</span>
-              </button>
+              </a>
             </div>
 
             {/* Quality Commitment Quote */}

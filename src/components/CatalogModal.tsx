@@ -40,7 +40,7 @@ export const CatalogModal: React.FC<CatalogModalProps> = ({ isOpen, onClose }) =
           <div className="flex items-center gap-3">
             <FileText className="w-5 h-5 text-[#D4AF37]" />
             <div>
-              <h3 className="text-sm sm:text-base font-bold">Katalog Resmi &amp; Booklet Menu Saji Catering by IICC</h3>
+              <h3 className="text-sm sm:text-base font-bold">Katalog Resmi &amp; Booklet Menu Botani Catering by IICC</h3>
               <p className="text-[11px] text-blue-200">Dokumen Resmi PT BLST IPB University</p>
             </div>
           </div>
@@ -56,14 +56,17 @@ export const CatalogModal: React.FC<CatalogModalProps> = ({ isOpen, onClose }) =
               <span>Cetak / Print</span>
             </button>
 
-            <button
-              onClick={handleDownloadPDF}
-              type="button"
+            <a
+              href="/Katalog-Menu-Botani-Catering-IICC.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Katalog-Menu-Botani-Catering-IICC.pdf"
               className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#D4AF37] hover:bg-[#c49f2e] text-[#042361] text-xs font-bold transition-colors cursor-pointer shadow-xs"
+              title="Buka & Unduh Berkas PDF Resmi"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Simpan PDF</span>
-            </button>
+              <span>Unduh File PDF</span>
+            </a>
 
             <button
               onClick={onClose}
