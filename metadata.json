@@ -1,6 +1,6 @@
 {
   "name": "Saji Catering by IICC",
-  "description": "Layanan Katering Profesional & Elegan berstandar IPB International Convention Center (Unit Usaha PT BLST IPB University)",
+  "description": "Layanan Katering Profesional & Elegan berstandar IPB International Convention Center (Unit Usaha PT BLST IPB University) lengkap dengan kalkulator kalori dan gizi katering",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

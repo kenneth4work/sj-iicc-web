@@ -21,7 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
       }
 
       // Determine active section
-      const sections = ['beranda', 'meal-box', 'prasmanan', 'snack-box', 'syarat-ketentuan', 'kalkulator'];
+      const sections = ['beranda', 'meal-box', 'prasmanan', 'snack-box', 'kalkulator-kalori', 'kalkulator', 'syarat-ketentuan'];
       const scrollPosition = window.scrollY + 120;
 
       for (const sectionId of sections) {
@@ -46,6 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCatalog }) => {
     { id: 'meal-box', label: 'Meal Box', href: '#meal-box' },
     { id: 'prasmanan', label: 'Prasmanan', href: '#prasmanan' },
     { id: 'snack-box', label: 'Snack Box', href: '#snack-box' },
+    { id: 'kalkulator-kalori', label: 'Kalori & Gizi', href: '#kalkulator-kalori' },
     { id: 'syarat-ketentuan', label: 'Syarat & Ketentuan', href: '#syarat-ketentuan' },
   ];
 

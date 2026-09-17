@@ -4,6 +4,7 @@ import { HeroSection } from './components/HeroSection.tsx';
 import { StatsAndTrust } from './components/StatsAndTrust.tsx';
 import { MenuSection } from './components/MenuSection.tsx';
 import { SnackBoxBuilder } from './components/SnackBoxBuilder.tsx';
+import { CaloriesCalculator } from './components/CaloriesCalculator.tsx';
 import { BudgetCalculator } from './components/BudgetCalculator.tsx';
 import { TermsSection } from './components/TermsSection.tsx';
 import { FooterSection } from './components/FooterSection.tsx';
@@ -46,20 +47,23 @@ export default function App() {
         {/* 5. Interactive Custom Snack Box Builder */}
         <SnackBoxBuilder />
 
-        {/* 6. Event Budget & Quotation Calculator */}
+        {/* 6. Nutrition & Calories Calculator */}
+        <CaloriesCalculator />
+
+        {/* 7. Event Budget & Quotation Calculator */}
         <BudgetCalculator />
 
-        {/* 7. Syarat & Ketentuan Accordion */}
+        {/* 8. Syarat & Ketentuan Accordion */}
         <TermsSection />
       </main>
 
-      {/* 8. Footer Section (Deep Sapphire Theme) */}
+      {/* 9. Footer Section (Deep Sapphire Theme) */}
       <FooterSection />
 
-      {/* 9. Floating WhatsApp Widget with pulse indicator */}
+      {/* 10. Floating WhatsApp Widget with pulse indicator */}
       <FloatingWhatsApp />
 
-      {/* 10. Printable/Downloadable Catalog Booklet Modal */}
+      {/* 11. Printable/Downloadable Catalog Booklet Modal */}
       <CatalogModal
         isOpen={catalogOpen}
         onClose={() => setCatalogOpen(false)}

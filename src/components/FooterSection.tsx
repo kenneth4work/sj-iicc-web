@@ -76,6 +76,16 @@ export const FooterSection: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="#kalkulator-kalori" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+                  <span>• Kalkulator Kalori &amp; Analisis Gizi Menu</span>
+                </a>
+              </li>
+              <li>
+                <a href="#kalkulator" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+                  <span>• Kalkulator Estimasi Anggaran Acara</span>
+                </a>
+              </li>
+              <li>
                 <a href="#syarat-ketentuan" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
                   <span>• Syarat &amp; Ketentuan Pemesanan (H-7)</span>
                 </a>
